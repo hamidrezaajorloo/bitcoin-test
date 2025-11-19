@@ -12,7 +12,7 @@ def get_btc_price():
     ts = datetime.utcnow().isoformat(timespec="seconds") + "Z"
     return ts, price
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     while True:
         timestamp, price = get_btc_price()
         print(timestamp, "BTC/USDT =", price, flush=True)
